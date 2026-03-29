@@ -83,7 +83,8 @@ if (title && user) {
 // Add item
 function addItem() {
     let name = document.getElementById("itemName").value.trim();
-    let capacity = document.getElementById("capacity").value.trim();
+    let capacityInput = document.getElementById("capacity").value.trim();
+    let capacity = capacityInput === "" ? "default" : capacityInput;
     let price = document.getElementById("price").value;
     let qty = Number(document.getElementById("quantity").value);
     let mfg = document.getElementById("mfgDate").value;
@@ -91,7 +92,7 @@ function addItem() {
 
     let received = new Date().toLocaleDateString();
 
-    if (!name || !capacity || !price || !qty || !mfg || !exp) {
+    if (!name || !price || !qty || !mfg || !exp) {
         alert("Fill all fields");
         return;
     }
