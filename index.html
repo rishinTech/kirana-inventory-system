@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kirana App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+
+<div class="container">
+
+    <h2 id="title">Login</h2>
+
+    <!-- Login -->
+    <div id="loginSection">
+        <input type="text" id="loginUsername" placeholder="Username">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <button onclick="login()">Login</button>
+
+        <p>New user? <span class="link" onclick="showRegister()">Register</span></p>
+    </div>
+
+    <!-- Register -->
+    <div id="registerSection" style="display:none;">
+        <input type="text" id="regUsername" placeholder="Create Username">
+        <input type="password" id="regPassword" placeholder="Create Password">
+        <input type="text" id="shopName" placeholder="Shop Name">
+
+        <button onclick="register()">Register</button>
+
+        <p>Already have an account? <span class="link" onclick="showLogin()">Login</span></p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

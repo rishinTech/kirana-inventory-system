@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <div class="navbar">
+        <h1 id="shopTitle"></h1>
+        <button onclick="goTo('dashboard.html')">Back</button>
+    </div>
+
+    <div class="main-card">
+        <h2>Inventory</h2>
+
+<input type="text" id="itemName" placeholder="Item Name">
+<input type="text" id="capacity" placeholder="Capacity (e.g., 1L, 500ml)">
+<input type="number" id="price" placeholder="Price">
+<input type="number" id="quantity" placeholder="Quantity">
+<input type="date" id="mfgDate">
+<input type="date" id="expDate">
+
+<button onclick="addItem()">Add Item</button>
+
+<table id="inventoryTable">
+    <tr>
+    <th>S.No</th>
+    <th>Name</th>
+    <th>Capacity</th>
+    <th>Price</th>
+    <th>Qty</th>
+    <th>MFG</th>
+    <th>EXP</th>
+    <th>Received</th>
+    <th>Refill Qty</th>
+    <th>Refill Exp</th>
+    <th>Actions</th>
+</tr>>
+</table>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

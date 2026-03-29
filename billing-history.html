@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Billing History</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <div class="navbar">
+        <h1>Billing History</h1>
+        <button onclick="goTo('billing.html')">Back</button>
+    </div>
+
+    <div class="main-card">
+
+        <h3>Select Date</h3>
+        <div id="dateList"></div>
+
+        <hr>
+
+        <h3>Sales</h3>
+        <table id="historyTable">
+            <tr>
+                <th>Item</th>
+                <th>Qty</th>
+                <th>Total</th>
+            </tr>
+        </table>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+/* ================= GLOBAL ================= */
+body {
+    font-family: Arial, sans-serif;
+    background: #87CEEB; /* sky blue */
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* ================= CLOUD BACKGROUND (LOGIN ONLY) ================= */
+body::before {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/clouds.png');
+    opacity: 0.4;
+    animation: moveClouds 60s linear infinite;
+    z-index: -1;
+}
+
+@keyframes moveClouds {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* ================= LOGIN BOX ================= */
+.container {
+    width: 340px;
+    margin: 100px auto;
+    padding: 25px;
+    background: white;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+
+    /* Floating animation */
+    animation: floatBox 3s ease-in-out infinite;
+}
+
+@keyframes floatBox {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+h2 {
+    color: #003366; /* navy */
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    background: #003366;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0055aa;
+}
+
+.link {
+    color: #003366;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* ================= DASHBOARD ================= */
+.dashboard {
+    padding: 20px;
+}
+
+/* Navbar */
+.navbar, .bill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #003366;
+    color: white;
+    padding: 12px 20px;
+}
+
+/* Cards */
+.main-card {
+    margin: 30px auto;
+    width: 60%;
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Navigation buttons */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* ================= TABLE ================= */
+table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background: #003366;
+    color: white;
+}
+
+/* ================= INPUTS ================= */
+#billItem, #billCapacity, #billQty {
+    margin: 5px;
+    padding: 8px;
+}
+
+/* ================= DATE SECTION ================= */
+#dateSection {
+    text-align: right;
+    font-size: 14px;
+    color: white;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Billing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- Header -->
+     
+    <div class="bill-header">
+        <div>
+            <h1 id="shopTitle"></h1>
+            <p>Kirana Store Billing System</p>
+        </div>
+
+        <div id="dateSection"></div>
+    </div>
+    <button onclick="goTo('dashboard.html')">Back</button>
+<button onclick="goTo('billing-history.html')">Billing History</button>
+
+    <div class="main-card">
+
+        <!-- Add Item -->
+        <h3>Add Item to Bill</h3>
+
+        <input type="text" id="billItem" placeholder="Item Name">
+<input type="text" id="billCapacity" placeholder="Capacity (e.g., 1L)">
+<input type="number" id="billQty" placeholder="Quantity">
+
+<button onclick="addToBill()">Add</button>
+
+<h3 id="grandTotal">Total: ₹0</h3>
+
+<button onclick="generateBill()">Generate Bill</button>>
+<div id="dateSection"></div>
+
+        <!-- Bill Table -->
+        <table id="billTable">
+            <tr>
+                <th>S.No</th>
+                <th>Item</th>
+                <th>Qty</th>
+                <th>Unit Price</th>
+                <th>Total</th>
+            </tr>
+        </table>
+
+        
+
+        
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
